@@ -27,10 +27,8 @@ export default function Header() {
         />
 
         <div className="header-titles">
-          <p className="header-republic">République Togolaise</p>
           <h1 className="header-ministry">
-            Ministère délégué chargé de la Promotion des Investissements,
-            de l&apos;Industrie et de la Souveraineté Économique
+            Présentation des zones économiques
           </h1>
         </div>
       </div>
