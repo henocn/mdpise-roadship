@@ -21,17 +21,6 @@ export default function Header() {
           className="header-logo"
         />
       </div>
-
-      <div className="header-banderole" role="presentation" aria-hidden="true">
-        <span className="header-banderole__stripe header-banderole__stripe--jaune" />
-        <span className="header-banderole__stripe header-banderole__stripe--rouge" />
-        <span className="header-banderole__stripe header-banderole__stripe--vert" />
-        <span className="header-banderole__stripe header-banderole__stripe--blanc" />
-        <span className="header-banderole__stripe header-banderole__stripe--jaune" />
-        <span className="header-banderole__stripe header-banderole__stripe--rouge" />
-        <span className="header-banderole__stripe header-banderole__stripe--vert" />
-        <span className="header-banderole__stripe header-banderole__stripe--blanc" />
-      </div>
     </motion.header>
   );
 }

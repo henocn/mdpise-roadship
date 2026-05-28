@@ -5,8 +5,9 @@
 .app-header {
   background: linear-gradient(135deg, #0a7759 0%, #1f8b6d 100%);
   color: #fff;
-  padding: 0.35rem 2.5rem 0.55rem;
+  padding: 0.35rem 2.5rem 0;
   position: relative;
+  z-index: 1;
 }
 
 .header-inner {
@@ -33,10 +34,9 @@
   width: 100%;
   height: 6px;
   margin-top: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-banderole__stripe {
@@ -58,6 +58,38 @@
 }
 
 .header-banderole__stripe--blanc {
+  background-color: var(--togo-blanc);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.top-banderole {
+  display: flex;
+  width: 100%;
+  height: 6px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-banderole__stripe {
+  flex: 1 1 12.5%;
+  min-width: 0;
+  height: 100%;
+}
+
+.top-banderole__stripe--jaune {
+  background-color: var(--togo-jaune);
+}
+
+.top-banderole__stripe--rouge {
+  background-color: var(--togo-rouge);
+}
+
+.top-banderole__stripe--vert {
+  background-color: var(--togo-vert);
+}
+
+.top-banderole__stripe--blanc {
   background-color: var(--togo-blanc);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
 }

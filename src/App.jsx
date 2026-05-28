@@ -17,6 +17,16 @@ function App() {
   return (
     <div className="app">
       <Header />
+      <div className="top-banderole" role="presentation" aria-hidden="true">
+        <span className="top-banderole__stripe top-banderole__stripe--jaune" />
+        <span className="top-banderole__stripe top-banderole__stripe--rouge" />
+        <span className="top-banderole__stripe top-banderole__stripe--vert" />
+        <span className="top-banderole__stripe top-banderole__stripe--blanc" />
+        <span className="top-banderole__stripe top-banderole__stripe--jaune" />
+        <span className="top-banderole__stripe top-banderole__stripe--rouge" />
+        <span className="top-banderole__stripe top-banderole__stripe--vert" />
+        <span className="top-banderole__stripe top-banderole__stripe--blanc" />
+      </div>
 
       <main className="app-main">
         <section className="map-section" aria-label="Carte du Togo">
