@@ -42,9 +42,6 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>
-          Présentation au Président de la République — Feuille de route 2025–2030
-        </p>
         <p className="footer-confidential">
           Document confidentiel — Usage institutionnel uniquement
         </p>

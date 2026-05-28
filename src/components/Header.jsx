@@ -2,16 +2,11 @@ import { motion } from "framer-motion";
 import logoMinistere from "../assets/logo.png";
 
 
-const BANDEROLE_COULEURS = ["jaune", "rouge", "vert", "blanc"];
-
-
 ////////////////////////////////////////////////////
 //             Composant Header                   //
 ////////////////////////////////////////////////////
 
 export default function Header() {
-  const banderoles = [...BANDEROLE_COULEURS, ...BANDEROLE_COULEURS];
-
   return (
     <motion.header
       className="app-header"
@@ -25,21 +20,17 @@ export default function Header() {
           alt="Armoiries de la République Togolaise"
           className="header-logo"
         />
-
-        <div className="header-titles">
-          <h1 className="header-ministry">
-            Présentation des zones économiques
-          </h1>
-        </div>
       </div>
 
       <div className="header-banderole" role="presentation" aria-hidden="true">
-        {banderoles.map((couleur, index) => (
-          <span
-            key={`${couleur}-${index}`}
-            className={`header-banderole__stripe header-banderole__stripe--${couleur}`}
-          />
-        ))}
+        <span className="header-banderole__stripe header-banderole__stripe--jaune" />
+        <span className="header-banderole__stripe header-banderole__stripe--rouge" />
+        <span className="header-banderole__stripe header-banderole__stripe--vert" />
+        <span className="header-banderole__stripe header-banderole__stripe--blanc" />
+        <span className="header-banderole__stripe header-banderole__stripe--jaune" />
+        <span className="header-banderole__stripe header-banderole__stripe--rouge" />
+        <span className="header-banderole__stripe header-banderole__stripe--vert" />
+        <span className="header-banderole__stripe header-banderole__stripe--blanc" />
       </div>
     </motion.header>
   );
