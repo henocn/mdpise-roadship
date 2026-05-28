@@ -107,6 +107,11 @@
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
+  min-height: calc(100vh - 6px);
+  height: calc(100vh - 6px);
+  position: sticky;
+  top: 6px;
+  overflow: hidden;
 }
 
 .map-section {
@@ -163,9 +168,9 @@
 
 /* Paths régionaux — frontières + fond léger au survol */
 .region-path {
-  fill: rgba(0, 106, 78, 0.04);
-  stroke: #2a2a2a;
-  stroke-width: 1.2;
+  fill: rgba(169, 210, 199, 0.215);
+  stroke: #466140;
+  stroke-width: 6;
   stroke-linejoin: round;
   stroke-linecap: round;
   cursor: pointer;
@@ -182,13 +187,14 @@
 .region-path--hover,
 .region-path--selected {
   fill: color-mix(in srgb, var(--region-color, var(--color-primary)) 22%, transparent);
-  stroke: var(--region-color, var(--color-primary));
-  stroke-width: 2.5;
-  filter: drop-shadow(0 2px 8px color-mix(in srgb, var(--region-color, var(--color-primary)) 35%, transparent));
+  stroke: #02633b;
+  stroke-width: 4.4;
+  filter: drop-shadow(0 2px 9px #03311e);
 }
 
 .region-path--selected {
-  stroke-width: 3;
+  stroke-width: 5;
+  stroke: #03311e;
 }
 
 .map-tooltip {
