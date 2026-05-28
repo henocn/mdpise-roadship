@@ -5,7 +5,7 @@
 .app-header {
   background: linear-gradient(135deg, #0a7759 0%, #1f8b6d 100%);
   color: #fff;
-  padding: 0.35rem 2.5rem 0;
+  padding: 0.35rem 2.5rem 0.55rem;
   position: relative;
   z-index: 1;
 }
