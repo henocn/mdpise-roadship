@@ -102,15 +102,15 @@
 .app-main {
   flex: 1;
   display: flex;
-  padding: 2.5rem 3rem;
-  gap: 2.5rem;
+  padding: 2rem 2rem;
+  gap: 1.5rem;
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
 }
 
 .map-section {
-  flex: 0 0 400px;
+  flex: 0 0 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,7 +148,7 @@
 
 .map-wrapper {
   position: relative;
-  width: 320px;
+  width: 270px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -586,7 +586,7 @@
   }
 
   .map-wrapper {
-    width: 260px;
+    width: 240px;
     margin: 0 auto;
   }
 
