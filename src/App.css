@@ -107,11 +107,6 @@
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
-  min-height: calc(100vh - 6px);
-  height: calc(100vh - 6px);
-  position: sticky;
-  top: 6px;
-  overflow: hidden;
 }
 
 .map-section {
@@ -119,6 +114,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: sticky;
+  top: calc(6px + 1.5rem);
+  align-self: flex-start;
+  height: fit-content;
 }
 
 .detail-section {
@@ -127,7 +126,6 @@
   display: flex;
   align-items: stretch;
   overflow-y: visible;
-  max-height: none;
   padding-right: 0.5rem;
 }
 
@@ -162,13 +160,15 @@
 .togo-interactive-map {
   width: 100%;
   height: auto;
-  max-height: 72vh;
+  max-height: 92vh;
+  /* transform: scale(1.12); */
+  transform-origin: top center;
   filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.08));
 }
 
 /* Paths régionaux — frontières + fond léger au survol */
 .region-path {
-  fill: rgba(169, 210, 199, 0.215);
+  fill: #a9d2c71e;
   stroke: #466140;
   stroke-width: 6;
   stroke-linejoin: round;
@@ -211,12 +211,16 @@
   text-align: center;
 }
 
-.map-instruction {
-  margin-top: 1.5rem;
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
+.map-title {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-primary-dark);
   text-align: center;
-  font-style: italic;
+  border-bottom: 2px solid var(--color-gold);
+  padding-bottom: 0.25rem;
 }
 
 
@@ -562,7 +566,7 @@
   background: var(--color-primary-dark);
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
-  padding: 1.25rem 2rem;
+  padding: 0.75rem 1rem;
   font-size: 0.8rem;
 }
 

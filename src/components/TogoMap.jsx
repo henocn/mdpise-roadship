@@ -58,21 +58,9 @@ export default function TogoMap({ selectedRegion, onSelectRegion }) {
           })}
         </svg>
 
-        {activeHover && regionsData[activeHover] && !selectedRegion && (
-          <motion.div
-            className="map-tooltip"
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            key={activeHover}
-          >
-            {regionsData[activeHover].name}
-          </motion.div>
-        )}
       </div>
 
-      <p className="map-instruction">
-        Cliquez sur une région — les détails s&apos;affichent à droite
-      </p>
+      <h3 className="map-title">Carte du Togo</h3>
     </motion.div>
   );
 }
