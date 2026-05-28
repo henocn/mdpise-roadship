@@ -1,212 +1,131 @@
 /**
- * Données des régions du Togo - Feuille de route du Ministère délégué
- * chargé de la Promotion des Investissements, de l'Industrie
- * et de la Souveraineté Économique
+ * Données des régions du Togo — Zones économiques stratégiques
+ * Structure orientée présentation institutionnelle
  */
 
 export const regionsData = {
   maritime: {
     id: "maritime",
     name: "Région Maritime",
-    capital: "Lomé",
-    description:
-      "Pôle économique majeur du Togo, la Région Maritime abrite la capitale Lomé, le Port Autonome de Lomé (seul port en eau profonde de la côte ouest-africaine) et la Zone Franche Industrielle. Elle concentre plus de 70% de l'activité industrielle nationale.",
-    population: "3 200 000 habitants",
-    superficie: "6 100 km²",
     color: "#006A4E",
-    zones: [
-      {
-        commune: "Adetikopé",
-        nom: "Plateforme Industrielle d'Adétikopé (PIA)",
-        type: "Zone Industrielle",
-        description:
-          "Plateforme industrielle de classe mondiale dédiée à la transformation des matières premières agricoles et à l'industrie manufacturière. Superficie de 400 hectares avec infrastructures modernes.",
-        statut: "Opérationnelle",
-      },
-      {
-        commune: "Lomé",
-        nom: "Zone Franche du Port de Lomé",
-        type: "Zone Franche Portuaire",
-        description:
-          "Zone économique spéciale adossée au Port Autonome de Lomé, hub logistique et commercial de référence en Afrique de l'Ouest.",
-        statut: "Opérationnelle",
-      },
+    ville: "Adétikopé",
+    zone: {
+      nom: "Plateforme Industrielle d'Adétikopé (PIA)",
+      type: "Zone Industrielle",
+      statut: "Opérationnelle",
+      description:
+        "Plateforme industrielle de classe mondiale sur 400 hectares, dédiée à la transformation des matières premières agricoles et à l'industrie manufacturière. Infrastructures modernes, guichet unique pour les investisseurs.",
+    },
+    images: [
+      "https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800&q=80",
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+      "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80",
     ],
     atouts: [
       "Port en eau profonde",
-      "Zone Franche Industrielle",
-      "Aéroport International",
-      "Main-d'œuvre qualifiée",
+      "Zone franche industrielle",
+      "Aéroport international",
       "Hub logistique régional",
-    ],
-    projetsPhares: [
-      "Extension de la PIA - Phase 2",
-      "Modernisation du corridor Lomé-Ouagadougou",
-      "Pôle agro-industriel de transformation",
     ],
   },
 
   plateaux: {
     id: "plateaux",
     name: "Région des Plateaux",
-    capital: "Atakpamé",
-    description:
-      "Grenier agricole du Togo, la Région des Plateaux est caractérisée par un potentiel agro-industriel considérable. Ses terres fertiles et son climat favorable en font le cœur de la production de café, cacao, coton et cultures vivrières.",
-    population: "1 800 000 habitants",
-    superficie: "16 975 km²",
     color: "#1B5E20",
-    zones: [
-      {
-        commune: "Atakpamé",
-        nom: "Zone Agro-Industrielle d'Atakpamé",
-        type: "Zone Agro-Industrielle",
-        description:
-          "Pôle de transformation des produits agricoles (café, cacao, palmier à huile) avec des unités de stockage et de conditionnement modernes.",
-        statut: "En développement",
-      },
-      {
-        commune: "Kpalimé",
-        nom: "Pôle Écotouristique et Artisanal de Kpalimé",
-        type: "Zone Économique Spéciale",
-        description:
-          "Zone dédiée à l'artisanat d'art, à l'écotourisme et à la transformation locale des produits forestiers non ligneux.",
-        statut: "Planifiée",
-      },
+    ville: "Atakpamé",
+    zone: {
+      nom: "Zone Agro-Industrielle d'Atakpamé",
+      type: "Zone Agro-Industrielle",
+      statut: "En développement",
+      description:
+        "Pôle de transformation des produits agricoles (café, cacao, palmier à huile) avec unités de stockage et de conditionnement modernes. Vocation exportatrice vers la sous-région.",
+    },
+    images: [
+      "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80",
+      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&q=80",
+      "https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?w=800&q=80",
     ],
     atouts: [
-      "Terres agricoles fertiles",
-      "Production de café et cacao",
+      "Terres fertiles",
+      "Production café & cacao",
       "Potentiel écotouristique",
-      "Ressources forestières",
-      "Position géographique centrale",
-    ],
-    projetsPhares: [
-      "Complexe agro-industriel de transformation du cacao",
-      "Développement de la filière palmier à huile",
-      "Centre de formation aux métiers agricoles",
+      "Position centrale",
     ],
   },
 
   centre: {
     id: "centre",
     name: "Région Centrale",
-    capital: "Sokodé",
-    description:
-      "Carrefour stratégique du Togo, la Région Centrale occupe une position géographique privilégiée reliant le nord au sud. Elle dispose d'un potentiel significatif dans l'élevage, l'agriculture et les ressources minières.",
-    population: "800 000 habitants",
-    superficie: "13 317 km²",
     color: "#E65100",
-    zones: [
-      {
-        commune: "Sokodé",
-        nom: "Zone Économique de Sokodé",
-        type: "Zone Économique Mixte",
-        description:
-          "Pôle logistique et commercial au carrefour des axes nord-sud et est-ouest, dédié au transit, au commerce et à la transformation des produits d'élevage.",
-        statut: "En développement",
-      },
-      {
-        commune: "Blitta",
-        nom: "Pôle Minier de Blitta",
-        type: "Zone d'Exploitation Minière",
-        description:
-          "Zone de valorisation des ressources minières (fer, manganèse) avec infrastructure de transport adaptée.",
-        statut: "Planifiée",
-      },
+    ville: "Sokodé",
+    zone: {
+      nom: "Hub Logistique et Commercial de Sokodé",
+      type: "Zone Économique Mixte",
+      statut: "En développement",
+      description:
+        "Pôle logistique au carrefour des axes nord-sud et est-ouest, dédié au transit, au commerce régional et à la transformation des produits d'élevage. Position stratégique de corridor.",
+    },
+    images: [
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+      "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80",
     ],
     atouts: [
-      "Position de carrefour",
+      "Carrefour de transit",
       "Ressources minières",
       "Élevage bovin",
-      "Corridor de transit",
       "Potentiel énergétique",
-    ],
-    projetsPhares: [
-      "Hub logistique multimodal",
-      "Complexe de transformation des produits d'élevage",
-      "Développement minier responsable",
     ],
   },
 
   kara: {
     id: "kara",
     name: "Région de la Kara",
-    capital: "Kara",
-    description:
-      "Terre d'histoire et de culture, la Région de la Kara possède un riche patrimoine (Koutammakou, patrimoine mondial UNESCO) et des ressources naturelles diversifiées. Son potentiel minier et touristique en fait un territoire d'avenir.",
-    population: "900 000 habitants",
-    superficie: "11 738 km²",
     color: "#1565C0",
-    zones: [
-      {
-        commune: "Kara",
-        nom: "Zone Industrielle de Kara",
-        type: "Zone Industrielle",
-        description:
-          "Pôle industriel régional dédié à la transformation des matières premières locales (phosphate, calcaire, produits agricoles) et à la fabrication de matériaux de construction.",
-        statut: "En développement",
-      },
-      {
-        commune: "Bassar",
-        nom: "Zone Minière de Bassar",
-        type: "Zone d'Exploitation Minière",
-        description:
-          "Valorisation du gisement de fer de Bandjéli et développement d'une sidérurgie locale pour la souveraineté industrielle.",
-        statut: "Planifiée",
-      },
+    ville: "Bassar",
+    zone: {
+      nom: "Zone Minière et Sidérurgique de Bassar",
+      type: "Zone d'Exploitation Minière",
+      statut: "Planifiée",
+      description:
+        "Valorisation du gisement de fer de Bandjéli et développement d'une sidérurgie locale pour la souveraineté industrielle du Togo. Projet structurant d'envergure nationale.",
+    },
+    images: [
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
+      "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&q=80",
+      "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&q=80",
     ],
     atouts: [
-      "Patrimoine UNESCO (Koutammakou)",
-      "Ressources minières (fer, phosphate)",
+      "Patrimoine UNESCO",
+      "Gisement de fer",
       "Potentiel touristique",
       "Énergie hydraulique",
-      "Savoir-faire artisanal",
-    ],
-    projetsPhares: [
-      "Développement sidérurgique national",
-      "Circuit touristique du Koutammakou",
-      "Pôle de transformation des phosphates",
     ],
   },
 
   savanes: {
     id: "savanes",
     name: "Région des Savanes",
-    capital: "Dapaong",
-    description:
-      "Porte d'entrée nord du Togo vers le Sahel, la Région des Savanes est un territoire à fort potentiel agropastoral et minier. Sa position frontalière avec le Burkina Faso, le Ghana et le Bénin lui confère un rôle stratégique dans le commerce transfrontalier.",
-    population: "1 000 000 habitants",
-    superficie: "8 470 km²",
     color: "#B71C1C",
-    zones: [
-      {
-        commune: "Cinkassé",
-        nom: "Zone Économique Transfrontalière de Cinkassé",
-        type: "Zone Franche Transfrontalière",
-        description:
-          "Plateforme commerciale transfrontalière au carrefour du Togo, du Burkina Faso et du Ghana, dédiée au commerce régional et à la logistique.",
-        statut: "Opérationnelle",
-      },
-      {
-        commune: "Dapaong",
-        nom: "Pôle Agropastoral de Dapaong",
-        type: "Zone Agro-Industrielle",
-        description:
-          "Zone spécialisée dans la transformation des produits d'élevage et des céréales, avec des unités de conditionnement pour l'export vers le Sahel.",
-        statut: "En développement",
-      },
+    ville: "Cinkassé",
+    zone: {
+      nom: "Zone Économique Transfrontalière de Cinkassé",
+      type: "Zone Franche Transfrontalière",
+      statut: "Opérationnelle",
+      description:
+        "Plateforme commerciale transfrontalière au carrefour du Togo, du Burkina Faso et du Ghana. Dédiée au commerce régional, à la logistique et aux échanges avec le Sahel.",
+    },
+    images: [
+      "https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800&q=80",
+      "https://images.unsplash.com/photo-1473163928189-364b2c4e1135?w=800&q=80",
+      "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&q=80",
     ],
     atouts: [
       "Commerce transfrontalier",
-      "Élevage extensif",
-      "Production céréalière",
-      "Position stratégique sahélienne",
       "Potentiel solaire élevé",
-    ],
-    projetsPhares: [
-      "Marché régional transfrontalier",
-      "Centrale solaire de Dapaong",
-      "Complexe agropastoral intégré",
+      "Production céréalière",
+      "Position sahélienne",
     ],
   },
 };
