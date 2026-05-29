@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { MapPin, Factory, X, ChevronRight, ArrowLeft } from "lucide-react";
 import { regionsData } from "../data/regions";
-import { getRegionZoomConfig } from "../data/togoRegionPaths";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -32,8 +31,6 @@ export default function RegionDetail({ regionId, onClose }) {
   const [step, setStep] = useState(0);
   const region = regionsData[regionId];
   if (!region) return null;
-
-  const zoomConfig = getRegionZoomConfig(regionId);
 
   return (
     <motion.div
@@ -79,21 +76,22 @@ export default function RegionDetail({ regionId, onClose }) {
               src={secondSvgMap[regionId]}
               alt={region.name}
               className="region-card__full-map"
-              initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
-              animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-              transition={{ delay: 0.15, duration: 0.7, ease: "easeOut" }}
+              initial={{ opacity: 0, scale: 0.4 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.1, duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
             />
 
             <motion.button
               type="button"
               className="region-card__next-btn"
               onClick={() => setStep(1)}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.3 }}
+              aria-label="Voir les détails"
+              title="Voir les détails"
             >
-              Voir les détails
-              <ChevronRight size={18} />
+              <ChevronRight size={22} />
             </motion.button>
           </motion.div>
         ) : (
@@ -141,19 +139,6 @@ export default function RegionDetail({ regionId, onClose }) {
                 </div>
               </div>
 
-              <div className="region-card__map">
-                <svg
-                  viewBox={zoomConfig.viewBox}
-                  className="region-card__map-svg"
-                  aria-label={region.name}
-                >
-                  <path
-                    d={zoomConfig.d}
-                    style={{ "--region-color": region.color }}
-                    className="region-card__map-path"
-                  />
-                </svg>
-              </div>
             </div>
 
             <div className="region-card__carousel">

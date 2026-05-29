@@ -383,6 +383,84 @@
   border-color: var(--color-primary);
 }
 
+/* Step 0 : carte plein panneau */
+.region-card__step-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  perspective: 800px;
+}
+
+.region-card__name--center {
+  border-left: none;
+  padding-left: 0;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.region-card__full-map {
+  width: 100%;
+  max-width: 95%;
+  height: auto;
+  max-height: 62vh;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 28px rgba(0, 0, 0, 0.15));
+  margin-bottom: 1.25rem;
+  border: 3px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  background: rgba(0, 106, 78, 0.02);
+}
+
+.region-card__next-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.25s;
+}
+
+.region-card__next-btn:hover {
+  background: var(--color-primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Step 1 : détails */
+.region-card__step-details {
+  position: relative;
+}
+
+.region-card__back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: 1px solid var(--color-border);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.region-card__back-btn:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
 .region-card__top {
   display: flex;
   gap: 1.5rem;
