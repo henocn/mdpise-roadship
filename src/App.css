@@ -175,7 +175,7 @@
 }
 
 .region-path-group--hover {
-  transform: scale(1.12);
+  transform: scale(1.07);
 }
 
 .region-path-group--selected {
@@ -183,7 +183,7 @@
 }
 
 .region-path-group--hover.region-path-group--selected {
-  transform: scale(1.14);
+  transform: scale(1.09);
 }
 
 /* Paths régionaux — coloriage par région */
