@@ -424,20 +424,39 @@
 
 .togo-overview__zone {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: stretch;
-  gap: 0.75rem;
-  padding: 1rem 1.1rem;
+  padding: 0;
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(0, 106, 78, 0.28);
   box-shadow: var(--shadow-sm);
   cursor: pointer;
+  overflow: hidden;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
     border-color 0.25s ease,
     background 0.25s ease;
+}
+
+.togo-overview__zone-num {
+  flex: 0 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 106, 78, 0.14);
+  transition: background 0.25s ease;
+}
+
+.togo-overview__zone-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.85rem 1rem;
 }
 
 .togo-overview__zone--solo {
@@ -457,48 +476,28 @@
     var(--shadow-md);
 }
 
+.togo-overview__zone:hover .togo-overview__zone-num,
+.togo-overview__zone--active .togo-overview__zone-num {
+  background: rgba(0, 106, 78, 0.28);
+}
+
 .togo-overview__zone-index {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 2rem;
-  height: 2rem;
   font-family: var(--font-side-label);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0;
   color: var(--togo-vert);
-  background: rgba(0, 106, 78, 0.1);
-  border: 1px solid rgba(0, 106, 78, 0.28);
-  border-radius: var(--radius-sm);
-}
-
-.togo-overview__zone--active .togo-overview__zone-index,
-.togo-overview__zone:hover .togo-overview__zone-index {
-  background: var(--togo-vert);
-  color: #fff;
-  border-color: var(--togo-vert);
-}
-
-.togo-overview__zone-head {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  width: 100%;
-  min-width: 0;
-}
-
-.togo-overview__zone--solo .togo-overview__zone-head {
-  justify-content: center;
+  line-height: 1;
 }
 
 .togo-overview__zone-name {
-  font-family: var(--font-side-label);
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-family: var(--font-side-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  font-style: italic;
   letter-spacing: 0.02em;
-  color: var(--color-text);
+  color: var(--color-primary-dark);
+  text-align: center;
   margin: 0;
   line-height: 1.35;
   min-width: 0;

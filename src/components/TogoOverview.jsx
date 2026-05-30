@@ -70,13 +70,14 @@ export default function TogoOverview({
                 tabIndex={0}
                 aria-label={`${region.zone.nom} — ${region.ville} — voir le détail`}
               >
-                <div className="togo-overview__zone-head">
-                  <span className="togo-overview__zone-index" aria-hidden="true">
-                    {index + 1}
-                  </span>
-                  <h4 className="togo-overview__zone-name">{region.zone.nom}</h4>
+                <div className="togo-overview__zone-num" aria-hidden="true">
+                  <span className="togo-overview__zone-index">{index + 1}</span>
                 </div>
-                <p className="togo-overview__zone-lieu">{region.ville}</p>
+
+                <div className="togo-overview__zone-content">
+                  <h4 className="togo-overview__zone-name">{region.zone.nom}</h4>
+                  <p className="togo-overview__zone-lieu">{region.ville}</p>
+                </div>
               </motion.li>
             );
           })}
