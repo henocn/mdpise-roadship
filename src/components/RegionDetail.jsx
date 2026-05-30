@@ -23,6 +23,28 @@ const secondSvgMap = {
 };
 
 
+// Formate le libellé « nom de zone à ville » avec la ville en vert gras
+function ZoneTitle({ zoneNom, ville, className, style, ...motionProps }) {
+  return (
+    <motion.h2 className={className} style={style} {...motionProps}>
+      {zoneNom} à <strong className="region-card__ville-value">{ville}</strong>
+    </motion.h2>
+  );
+}
+
+
+// Affiche la ligne « Lieu à ville » avec la ville en vert gras
+function ZoneLieu({ ville }) {
+  return (
+    <div className="region-card__ville">
+      <MapPin size={16} aria-hidden />
+      <span className="region-card__ville-label">Lieu à</span>
+      <strong className="region-card__ville-value">{ville}</strong>
+    </div>
+  );
+}
+
+
 ////////////////////////////////////////////////////
 //          Composant RegionDetail                //
 ////////////////////////////////////////////////////
@@ -62,19 +84,19 @@ export default function RegionDetail({ regionId, onClose }) {
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.4 }}
           >
-            <motion.h2
+            <ZoneTitle
+              zoneNom={region.zone.nom}
+              ville={region.ville}
               className="region-card__name region-card__name--center"
+              style={{ "--region-accent": region.color }}
               initial={{ opacity: 0, y: -15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.35 }}
-              style={{ "--region-accent": region.color }}
-            >
-              {region.name}
-            </motion.h2>
+            />
 
             <motion.img
               src={secondSvgMap[regionId]}
-              alt={region.name}
+              alt={`${region.zone.nom} à ${region.ville}`}
               className="region-card__full-map"
               initial={{ opacity: 0, scale: 0.4 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -118,13 +140,11 @@ export default function RegionDetail({ regionId, onClose }) {
                   className="region-card__name"
                   style={{ "--region-accent": region.color }}
                 >
-                  {region.name}
+                  {region.zone.nom} à{" "}
+                  <strong className="region-card__ville-value">{region.ville}</strong>
                 </h2>
 
-                <div className="region-card__ville">
-                  <MapPin size={16} aria-hidden />
-                  <span>{region.ville}</span>
-                </div>
+                <ZoneLieu ville={region.ville} />
 
                 <div className="region-card__zone">
                   <div className="region-card__zone-header">
@@ -134,7 +154,6 @@ export default function RegionDetail({ regionId, onClose }) {
                       {region.zone.statut}
                     </span>
                   </div>
-                  <h3 className="region-card__zone-name">{region.zone.nom}</h3>
                   <p className="region-card__zone-desc">{region.zone.description}</p>
                 </div>
               </div>
@@ -158,7 +177,7 @@ export default function RegionDetail({ regionId, onClose }) {
                   <SwiperSlide key={idx}>
                     <img
                       src={src}
-                      alt={`${region.zone.nom} — illustration ${idx + 1}`}
+                      alt={`${region.zone.nom} à ${region.ville} — illustration ${idx + 1}`}
                       className="region-card__slide-img"
                     />
                   </SwiperSlide>

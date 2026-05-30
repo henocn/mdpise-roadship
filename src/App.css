@@ -166,11 +166,11 @@
   filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.08));
 }
 
-/* Paths régionaux — frontières + fond léger au survol */
+/* Paths régionaux — coloriage par région */
 .region-path {
-  fill: #a9d2c71e;
-  stroke: #466140;
-  stroke-width: 6;
+  fill: color-mix(in srgb, var(--region-color, var(--color-primary)) 82%, transparent);
+  stroke: #000;
+  stroke-width: 4;
   stroke-linejoin: round;
   stroke-linecap: round;
   cursor: pointer;
@@ -186,15 +186,14 @@
 .region-path:focus-visible,
 .region-path--hover,
 .region-path--selected {
-  fill: color-mix(in srgb, var(--region-color, var(--color-primary)) 22%, transparent);
-  stroke: #02633b;
-  stroke-width: 4.4;
-  filter: drop-shadow(0 2px 9px #03311e);
+  fill: color-mix(in srgb, var(--region-color, var(--color-primary)) 96%, transparent);
+  stroke: #000;
+  stroke-width: 5;
+  filter: drop-shadow(0 2px 9px color-mix(in srgb, var(--region-color) 35%, transparent));
 }
 
 .region-path--selected {
-  stroke-width: 5;
-  stroke: #03311e;
+  stroke-width: 5.5;
 }
 
 .map-tooltip {
@@ -488,9 +487,23 @@
   align-items: center;
   gap: 0.4rem;
   font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-primary);
   margin-bottom: 1.25rem;
+}
+
+.region-card__ville > svg {
+  color: var(--togo-vert);
+  flex-shrink: 0;
+}
+
+.region-card__ville-label {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.region-card__name .region-card__ville-value,
+.region-card__ville .region-card__ville-value {
+  font-weight: 700;
+  color: #006a4e;
 }
 
 .region-card__zone {
@@ -573,7 +586,7 @@
 
 .region-card__map-path {
   fill: color-mix(in srgb, var(--region-color, var(--color-primary)) 15%, transparent);
-  stroke: var(--region-color, var(--color-primary));
+  stroke: #000;
   stroke-width: 2.5;
   stroke-linejoin: round;
   stroke-linecap: round;
