@@ -3,12 +3,6 @@ import { togoOverview } from "../data/togoOverview";
 import { regionsData, regionsList } from "../data/regions";
 
 
-// Retourne le libellé court de la région administrative
-function regionAdminName(id) {
-  return regionsData[id]?.name ?? id;
-}
-
-
 ////////////////////////////////////////////////////
 //         Composant TogoOverview                 //
 ////////////////////////////////////////////////////
@@ -47,19 +41,21 @@ export default function TogoOverview({
           {regionsList.map((id, index) => {
             const region = regionsData[id];
             const isActive = hoveredRegion === id;
+            const isSolo = id === "maritime";
 
             return (
               <motion.li
                 key={id}
                 className={[
                   "togo-overview__zone",
+                  isSolo && "togo-overview__zone--solo",
                   isActive && "togo-overview__zone--active",
                 ]
                   .filter(Boolean)
                   .join(" ")}
                 style={{ "--zone-accent": region.color }}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.08 + index * 0.07, duration: 0.4 }}
                 onMouseEnter={() => onHoverRegion?.(id)}
                 onMouseLeave={() => onHoverRegion?.(null)}
@@ -72,24 +68,15 @@ export default function TogoOverview({
                 }}
                 role="button"
                 tabIndex={0}
-                aria-label={`${region.zone.nom} à ${region.ville} — voir le détail`}
+                aria-label={`${region.zone.nom} — ${region.ville} — voir le détail`}
               >
-                <span className="togo-overview__zone-index" aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <div className="togo-overview__zone-body">
-                  <div className="togo-overview__zone-top">
-                    <h4 className="togo-overview__zone-name">
-                      {region.zone.nom}
-                      <span className="togo-overview__zone-ville">{region.ville}</span>
-                    </h4>
-                    <span className="togo-overview__zone-region">
-                      {regionAdminName(id)}
-                    </span>
-                  </div>
-                  <p className="togo-overview__zone-trait">{region.grandTrait}</p>
+                <div className="togo-overview__zone-head">
+                  <span className="togo-overview__zone-index" aria-hidden="true">
+                    {index + 1}
+                  </span>
+                  <h4 className="togo-overview__zone-name">{region.zone.nom}</h4>
                 </div>
+                <p className="togo-overview__zone-lieu">{region.ville}</p>
               </motion.li>
             );
           })}
