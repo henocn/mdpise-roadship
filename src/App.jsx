@@ -13,6 +13,19 @@ import "./App.css";
 
 function App() {
   const [selectedRegion, setSelectedRegion] = useState(null);
+  const [hoveredRegion, setHoveredRegion] = useState(null);
+
+  // Ouvre le détail d'une région et réinitialise le survol carte ↔ panneau
+  function handleSelectRegion(regionId) {
+    setHoveredRegion(null);
+    setSelectedRegion(regionId);
+  }
+
+  // Ferme le détail et revient à la vue nationale
+  function handleCloseRegion() {
+    setSelectedRegion(null);
+    setHoveredRegion(null);
+  }
 
   return (
     <div className="app">
@@ -32,7 +45,9 @@ function App() {
         <section className="map-section" aria-label="Carte du Togo">
           <TogoMap
             selectedRegion={selectedRegion}
-            onSelectRegion={setSelectedRegion}
+            hoveredRegion={hoveredRegion}
+            onSelectRegion={handleSelectRegion}
+            onHoverRegion={setHoveredRegion}
           />
         </section>
 
@@ -42,10 +57,15 @@ function App() {
               <RegionDetail
                 key={selectedRegion}
                 regionId={selectedRegion}
-                onClose={() => setSelectedRegion(null)}
+                onClose={handleCloseRegion}
               />
             ) : (
-              <TogoOverview key="overview" />
+              <TogoOverview
+                key="overview"
+                hoveredRegion={hoveredRegion}
+                onHoverRegion={setHoveredRegion}
+                onSelectRegion={handleSelectRegion}
+              />
             )}
           </AnimatePresence>
         </section>

@@ -9,6 +9,8 @@ export const regionsData = {
     name: "Région Maritime",
     color: "#ffce00",
     ville: "Aného",
+    grandTrait:
+      "Littoral historique — commerce maritime, patrimoine et tourisme balnéaire.",
     zone: {
       nom: "Pôle côtier et touristique",
       type: "Zone Économique Côtière",
@@ -37,6 +39,8 @@ export const regionsData = {
     name: "Région des Plateaux",
     color: "#006a4e",
     ville: "Kpalimé",
+    grandTrait:
+      "Agro-industrie exportatrice — café, cacao et filières forestières.",
     zone: {
       nom: "Pôle agro-industriel",
       type: "Zone Agro-Industrielle",
@@ -65,6 +69,8 @@ export const regionsData = {
     name: "Région Centrale",
     color: "#ffce00",
     ville: "Blitta",
+    grandTrait:
+      "Carrefour national — transit, logistique et transformation agricole.",
     zone: {
       nom: "Hub logistique et commercial",
       type: "Zone Économique Mixte",
@@ -93,6 +99,8 @@ export const regionsData = {
     name: "Région de la Kara",
     color: "#006a4e",
     ville: "Kara",
+    grandTrait:
+      "Nord industriel — valorisation minière et échanges transfrontaliers.",
     zone: {
       nom: "Pôle minier et industriel",
       type: "Zone Économique Régionale",
@@ -121,6 +129,8 @@ export const regionsData = {
     name: "Région des Savanes",
     color: "#d21034",
     ville: "Cinkassé",
+    grandTrait:
+      "Porte du Sahel — commerce transfrontalier et hub logistique régional.",
     zone: {
       nom: "Plateforme transfrontalière",
       type: "Zone Franche Transfrontalière",
@@ -145,10 +155,11 @@ export const regionsData = {
   },
 };
 
+/** Ordre d'affichage Nord → Sud (Savanes → Maritime) */
 export const regionsList = [
-  "maritime",
-  "plateaux",
-  "centre",
-  "kara",
   "savanes",
+  "kara",
+  "centre",
+  "plateaux",
+  "maritime",
 ];

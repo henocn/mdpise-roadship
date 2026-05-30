@@ -1,69 +1,100 @@
 import { motion } from "framer-motion";
-import { Map, Users, Landmark, Target, ChevronRight } from "lucide-react";
 import { togoOverview } from "../data/togoOverview";
+import { regionsData, regionsList } from "../data/regions";
+
+
+// Retourne le libellé court de la région administrative
+function regionAdminName(id) {
+  return regionsData[id]?.name ?? id;
+}
 
 
 ////////////////////////////////////////////////////
 //         Composant TogoOverview                 //
 ////////////////////////////////////////////////////
 
-export default function TogoOverview() {
+export default function TogoOverview({
+  hoveredRegion = null,
+  onHoverRegion,
+  onSelectRegion,
+}) {
   return (
-    <motion.div
-      className="side-panel side-panel--overview"
-      initial={{ opacity: 0, x: 24 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.4 }}
+    <motion.article
+      className="togo-overview"
+      initial={{ opacity: 0, y: 28 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.55, ease: "easeOut" }}
+      aria-label="Présentation des zones économiques du Togo"
     >
-      <div className="side-panel-badge">
-        <Map size={18} aria-hidden />
-        <span>Vue nationale</span>
-      </div>
+      <header className="togo-overview__hero">
+        <p className="togo-overview__eyebrow">{togoOverview.eyebrow}</p>
+        <div className="togo-overview__ornament" aria-hidden="true">
+          <span className="togo-overview__ornament-line" />
+          <span className="togo-overview__ornament-gem" />
+          <span className="togo-overview__ornament-line" />
+        </div>
+        <h2 className="togo-overview__title">{togoOverview.title}</h2>
+        <p className="togo-overview__intro">{togoOverview.intro}</p>
+      </header>
 
-      <h2 className="side-panel-title">{togoOverview.title}</h2>
-      <p className="side-panel-subtitle">{togoOverview.subtitle}</p>
-      <p className="side-panel-description">{togoOverview.description}</p>
+      <section className="togo-overview__zones" aria-label="Les cinq zones économiques">
+        <div className="togo-overview__zones-head">
+          <span className="togo-overview__zones-label">Grandes lignes</span>
+          <h3 className="togo-overview__zones-title">Les 5 zones économiques</h3>
+        </div>
 
-      <div className="region-stats">
-        {togoOverview.chiffres.map((item) => (
-          <div key={item.label} className="stat-card">
-            <span className="stat-label">{item.label}</span>
-            <span className="stat-value">{item.value}</span>
-          </div>
-        ))}
-      </div>
+        <ol className="togo-overview__zone-list">
+          {regionsList.map((id, index) => {
+            const region = regionsData[id];
+            const isActive = hoveredRegion === id;
 
-      <div className="region-section">
-        <h3 className="section-title">
-          <Target size={18} aria-hidden />
-          Axes stratégiques
-        </h3>
-        <ul className="projets-list overview-axes">
-          {togoOverview.axes.map((axe) => (
-            <li key={axe}>{axe}</li>
-          ))}
-        </ul>
-      </div>
+            return (
+              <motion.li
+                key={id}
+                className={[
+                  "togo-overview__zone",
+                  isActive && "togo-overview__zone--active",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                style={{ "--zone-accent": region.color }}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.08 + index * 0.07, duration: 0.4 }}
+                onMouseEnter={() => onHoverRegion?.(id)}
+                onMouseLeave={() => onHoverRegion?.(null)}
+                onClick={() => onSelectRegion?.(id)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    onSelectRegion?.(id);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                aria-label={`${region.zone.nom} à ${region.ville} — voir le détail`}
+              >
+                <span className="togo-overview__zone-index" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
 
-      <div className="region-section">
-        <h3 className="section-title">
-          <Landmark size={18} aria-hidden />
-          Les 5 régions
-        </h3>
-        <ul className="regions-overview-list">
-          {togoOverview.regionsList.map((name) => (
-            <li key={name}>
-              <ChevronRight size={14} aria-hidden />
-              {name}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <p className="side-panel-hint">
-        <Users size={16} aria-hidden />
-        Sélectionnez une région sur la carte pour afficher ses zones économiques
-      </p>
-    </motion.div>
+                <div className="togo-overview__zone-body">
+                  <div className="togo-overview__zone-top">
+                    <h4 className="togo-overview__zone-name">
+                      {region.zone.nom}
+                      <span className="togo-overview__zone-ville">{region.ville}</span>
+                    </h4>
+                    <span className="togo-overview__zone-region">
+                      {regionAdminName(id)}
+                    </span>
+                  </div>
+                  <p className="togo-overview__zone-trait">{region.grandTrait}</p>
+                </div>
+              </motion.li>
+            );
+          })}
+        </ol>
+      </section>
+    </motion.article>
   );
 }
