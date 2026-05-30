@@ -14,18 +14,21 @@ export const regionsData = {
       type: "Zone Économique Côtière",
       statut: "En développement",
       description:
-        "Pôle économique historique du littoral togolais, orienté vers le commerce maritime, la pêche, le tourisme culturel et les activités portuaires complémentaires à la zone de Lomé.",
+        "Pôle économique historique du littoral togolais, tourné vers le commerce maritime, la pêche artisanale et le tourisme culturel. Il complète l'axe portuaire de Lomé par une vocation patrimoniale et balnéaire à forte valeur ajoutée.",
     },
+    vision:
+      "Faire d'Aného un pôle côtier attractif, ancré dans le patrimoine togolais, capable d'attirer investisseurs et visiteurs tout en structurant durablement l'emploi local.",
     images: [
       "https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800&q=80",
       "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
       "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80",
     ],
     atouts: [
-      "Accès maritime",
+      "Accès maritime direct",
       "Patrimoine historique",
       "Tourisme balnéaire",
       "Proximité du corridor côtier",
+      "Potentiel de services portuaires",
     ],
   },
 
@@ -39,8 +42,10 @@ export const regionsData = {
       type: "Zone Agro-Industrielle",
       statut: "En développement",
       description:
-        "Pôle de transformation des produits agricoles (café, cacao, palmier à huile) et de valorisation des filières forestières, avec vocation exportatrice vers la sous-région.",
+        "Pôle de transformation des produits agricoles — café, cacao, palmier à huile — et de valorisation des filières forestières. Positionné comme plateforme exportatrice vers la sous-région ouest-africaine.",
     },
+    vision:
+      "Positionner Kpalimé comme hub agro-industriel de référence, créateur de valeur sur les filières agricoles togolaises et moteur d'exportation régionale.",
     images: [
       "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80",
       "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&q=80",
@@ -51,6 +56,7 @@ export const regionsData = {
       "Production café & cacao",
       "Potentiel écotouristique",
       "Position stratégique sud-est",
+      "Filières forestières",
     ],
   },
 
@@ -66,6 +72,8 @@ export const regionsData = {
       description:
         "Pôle logistique et agro-industriel au cœur du corridor national, dédié au transit, à la transformation agricole et au développement des activités commerciales régionales.",
     },
+    vision:
+      "Faire de Blitta le carrefour logistique du Togo, connectant les marchés intérieurs et les flux commerciaux régionaux dans une dynamique de souveraineté économique.",
     images: [
       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
       "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
@@ -74,8 +82,9 @@ export const regionsData = {
     atouts: [
       "Carrefour de transit",
       "Agriculture vivrière",
-      "Élevage",
+      "Élevage bovin",
       "Position centrale",
+      "Réseau routier structurant",
     ],
   },
 
@@ -91,6 +100,8 @@ export const regionsData = {
       description:
         "Pôle structurant du nord du Togo, combinant valorisation minière, développement industriel et renforcement des échanges commerciaux avec le Burkina Faso et le Bénin.",
     },
+    vision:
+      "Transformer Kara en pôle industriel du nord, porteur de la souveraineté minière et de la création d'emplois qualifiés pour les populations de la sous-région.",
     images: [
       "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
       "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&q=80",
@@ -101,6 +112,7 @@ export const regionsData = {
       "Ressources minières",
       "Potentiel touristique",
       "Énergie hydraulique",
+      "Marché transfrontalier",
     ],
   },
 
@@ -116,6 +128,8 @@ export const regionsData = {
       description:
         "Plateforme commerciale transfrontalière au carrefour du Togo, du Burkina Faso et du Ghana, dédiée au commerce régional, à la logistique et aux échanges avec le Sahel.",
     },
+    vision:
+      "Consolider Cinkassé comme porte d'entrée commerciale du Sahel, facilitatrice des échanges transfrontaliers et catalyseur de la prospérité partagée.",
     images: [
       "https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800&q=80",
       "https://images.unsplash.com/photo-1473163928189-364b2c4e1135?w=800&q=80",
@@ -126,6 +140,7 @@ export const regionsData = {
       "Potentiel solaire élevé",
       "Production céréalière",
       "Position sahélienne",
+      "Hub logistique régional",
     ],
   },
 };

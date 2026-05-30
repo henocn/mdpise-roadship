@@ -56,6 +56,31 @@ export default function TogoMap({ selectedRegion, onSelectRegion }) {
               />
             );
           })}
+
+          {togoMapConfig.cityMarkers.map((marker, index) => (
+            <g
+              key={`city-${marker.regionId ?? index}`}
+              className="region-city-marker-group"
+              aria-hidden
+            >
+              <circle
+                cx={marker.cx}
+                cy={marker.cy}
+                r={marker.r}
+                className="region-city-marker"
+              />
+              {marker.label && (
+                <text
+                  x={marker.labelX}
+                  y={marker.labelY}
+                  textAnchor={marker.labelAnchor}
+                  className="region-city-label"
+                >
+                  {marker.label}
+                </text>
+              )}
+            </g>
+          ))}
         </svg>
 
       </div>
