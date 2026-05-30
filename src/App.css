@@ -326,9 +326,22 @@
 
 .togo-overview__hero {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   padding-bottom: 1.75rem;
   margin-bottom: 1.75rem;
   border-bottom: 1px solid rgba(0, 106, 78, 0.1);
+  container-type: inline-size;
+}
+
+.togo-overview__subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.15rem;
 }
 
 .togo-overview__eyebrow {
@@ -338,19 +351,20 @@
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--color-gold);
-  margin-bottom: 0.85rem;
+  margin: 0;
 }
 
 .togo-overview__ornament {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.65rem;
-  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 14rem;
 }
 
 .togo-overview__ornament-line {
   flex: 1;
-  max-width: 4.5rem;
   height: 1px;
   background: linear-gradient(
     90deg,
@@ -363,20 +377,23 @@
 .togo-overview__ornament-gem {
   width: 7px;
   height: 7px;
+  flex-shrink: 0;
   transform: rotate(45deg);
   background: var(--color-gold);
   box-shadow: 0 0 0 3px rgba(200, 169, 81, 0.15);
 }
 
 .togo-overview__title {
-  font-family: var(--font-side-display);
-  font-size: clamp(1.85rem, 3vw, 2.35rem);
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: var(--color-primary-dark);
-  margin: 0 0 1rem;
-  max-width: 22ch;
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 4.8cqi, 2.05rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.015em;
+  color: var(--color-text);
+  margin: 0 0 0.85rem;
+  white-space: nowrap;
+  max-width: 100%;
+  text-align: center;
 }
 
 .togo-overview__intro {
@@ -387,29 +404,23 @@
   color: var(--color-text-secondary);
   margin: 0;
   max-width: 52ch;
+  text-align: center;
 }
 
-.togo-overview__zones-head {
-  margin-bottom: 1.25rem;
-}
-
-.togo-overview__zones-label {
-  display: block;
-  font-family: var(--font-side-label);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--togo-vert);
-  margin-bottom: 0.35rem;
+.togo-overview__zones {
+  container-type: inline-size;
 }
 
 .togo-overview__zones-title {
-  font-family: var(--font-side-display);
-  font-size: 1.35rem;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 4.8cqi, 2.05rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.015em;
   color: var(--color-text);
-  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  margin: 0 0 1.25rem;
 }
 
 .togo-overview__zone-list {

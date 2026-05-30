@@ -21,21 +21,22 @@ export default function TogoOverview({
       aria-label="Présentation des zones économiques du Togo"
     >
       <header className="togo-overview__hero">
-        <p className="togo-overview__eyebrow">{togoOverview.eyebrow}</p>
-        <div className="togo-overview__ornament" aria-hidden="true">
-          <span className="togo-overview__ornament-line" />
-          <span className="togo-overview__ornament-gem" />
-          <span className="togo-overview__ornament-line" />
-        </div>
         <h2 className="togo-overview__title">{togoOverview.title}</h2>
+
+        <div className="togo-overview__subtitle">
+          <p className="togo-overview__eyebrow">{togoOverview.eyebrow}</p>
+          <div className="togo-overview__ornament" aria-hidden="true">
+            <span className="togo-overview__ornament-line" />
+            <span className="togo-overview__ornament-gem" />
+            <span className="togo-overview__ornament-line" />
+          </div>
+        </div>
+
         <p className="togo-overview__intro">{togoOverview.intro}</p>
       </header>
 
       <section className="togo-overview__zones" aria-label="Les cinq zones économiques">
-        <div className="togo-overview__zones-head">
-          <span className="togo-overview__zones-label">Grandes lignes</span>
-          <h3 className="togo-overview__zones-title">Les 5 zones économiques</h3>
-        </div>
+        <h3 className="togo-overview__zones-title">Les 5 zones économiques</h3>
 
         <ol className="togo-overview__zone-list">
           {regionsList.map((id, index) => {
