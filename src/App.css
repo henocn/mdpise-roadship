@@ -408,7 +408,7 @@
   object-fit: contain;
   filter: drop-shadow(0 6px 28px rgba(0, 0, 0, 0.15));
   margin-bottom: 1.25rem;
-  border: 3px solid var(--color-primary);
+  border: 3px solid var(--togo-jaune);
   border-radius: var(--radius-md);
   padding: 1rem;
   background: rgba(0, 106, 78, 0.02);
