@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, EffectCoverflow } from "swiper/modules";
-import { MapPin, X, Sparkles, Target } from "lucide-react";
+import { Autoplay, Pagination } from "swiper/modules";
+import { MapPin, X, BadgeCheck, Target } from "lucide-react";
 import { regionsData } from "../data/regions";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
 
 
 // Affiche la ligne « Lieu à ville » avec la ville en vert gras
@@ -73,7 +72,7 @@ export default function RegionDetail({ regionId, onClose }) {
           transition={{ delay: 0.12, duration: 0.4 }}
         >
           <div className="region-card__panel-head">
-            <Sparkles size={18} aria-hidden />
+            <BadgeCheck size={18} aria-hidden />
             <h3 className="region-card__panel-title">Atouts</h3>
           </div>
           <ul className="region-card__atout-list">
@@ -105,19 +104,9 @@ export default function RegionDetail({ regionId, onClose }) {
           transition={{ delay: 0.28, duration: 0.45 }}
         >
           <Swiper
-            modules={[Autoplay, Pagination, EffectCoverflow]}
-            effect="coverflow"
-            grabCursor
-            centeredSlides
-            slidesPerView={1.15}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 120,
-              modifier: 1.4,
-              slideShadows: false,
-            }}
-            spaceBetween={20}
+            modules={[Autoplay, Pagination]}
+            slidesPerView={1}
+            spaceBetween={16}
             pagination={{ clickable: true }}
             autoplay={{ delay: 4000, disableOnInteraction: false }}
             className="region-card__swiper"
