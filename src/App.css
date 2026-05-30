@@ -288,8 +288,8 @@
   padding: 2.25rem 2rem 2rem;
   box-shadow:
     0 24px 60px rgba(0, 77, 56, 0.1),
-    0 1px 0 rgba(255, 255, 255, 0.9) inset,
-    0 0 0 1px rgba(0, 106, 78, 0.12);
+    0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  border: 2px solid var(--togo-vert);
   width: 100%;
   flex: 1;
   position: relative;
@@ -330,6 +330,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-top: 1.5rem;
   padding-bottom: 1.75rem;
   margin-bottom: 1.75rem;
   border-bottom: 1px solid rgba(0, 106, 78, 0.1);
@@ -341,7 +342,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 1.15rem;
+  margin-bottom: 1.85rem;
 }
 
 .togo-overview__eyebrow {
@@ -384,22 +385,23 @@
 }
 
 .togo-overview__title {
-  font-family: var(--font-display);
-  font-size: clamp(0.95rem, 4.8cqi, 2.05rem);
+  font-family: var(--font-side-label);
+  font-size: clamp(1rem, 5cqi, 2.1rem);
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.015em;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--color-text);
-  margin: 0 0 0.85rem;
+  margin: 0 0 1.5rem;
   white-space: nowrap;
   max-width: 100%;
   text-align: center;
 }
 
 .togo-overview__intro {
-  font-family: var(--font-side-display);
-  font-size: 1.08rem;
-  font-weight: 500;
+  font-family: var(--font-side-body);
+  font-size: 1.05rem;
+  font-weight: 400;
   line-height: 1.75;
   color: var(--color-text-secondary);
   margin: 0;
@@ -412,11 +414,12 @@
 }
 
 .togo-overview__zones-title {
-  font-family: var(--font-display);
-  font-size: clamp(0.95rem, 4.8cqi, 2.05rem);
+  font-family: var(--font-side-label);
+  font-size: clamp(0.82rem, 3.2cqi, 1.35rem);
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.015em;
+  line-height: 1.25;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--color-text);
   text-align: center;
   white-space: nowrap;
@@ -502,12 +505,12 @@
 }
 
 .togo-overview__zone-name {
-  font-family: var(--font-side-display);
-  font-size: 1.02rem;
+  font-family: var(--font-side-label);
+  font-size: 0.88rem;
   font-weight: 600;
-  font-style: italic;
-  letter-spacing: 0.02em;
-  color: var(--color-primary-dark);
+  font-style: normal;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
   text-align: center;
   margin: 0;
   line-height: 1.35;
