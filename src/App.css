@@ -3,7 +3,7 @@
    ================================================ */
 
 .app-header {
-  background: linear-gradient(135deg, #0a7759 0%, #1f8b6d 100%);
+  background: var(--togo-vert);
   color: #fff;
   padding: 0.35rem 2.5rem 0.55rem;
   position: relative;
@@ -25,7 +25,7 @@
   width: auto;
   height: 150px;
   flex-shrink: 0;
-  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
 }
 
 /* Banderole : 2 tours jaune · rouge · vert · blanc (8 bandes égales) */
