@@ -1,5 +1,5 @@
 /**
- * Données des régions du Togo — Zones économiques stratégiques
+ * Données des régions du Togo — Zones économiques spéciales (PNDI 2026–2031)
  * Structure orientée présentation institutionnelle
  */
 
@@ -10,27 +10,27 @@ export const regionsData = {
     color: "#ffce00",
     ville: "Aného",
     grandTrait:
-      "Littoral historique — commerce maritime, patrimoine et tourisme balnéaire.",
+      "Plateforme industrielle et technologique — corridors régionaux.",
     zone: {
-      nom: "Pôle côtier et touristique",
-      type: "Zone Économique Côtière",
-      statut: "En développement",
+      nom: "Plateforme industrielle et technologique",
+      type: "Zone Économique Spéciale",
+      statut: "PNDI 2026–2031",
       description:
-        "Pôle économique historique du littoral togolais, tourné vers le commerce maritime, la pêche artisanale et le tourisme culturel. Il complète l'axe portuaire de Lomé par une vocation patrimoniale et balnéaire à forte valeur ajoutée.",
+        "Plateforme industrielle et technologique connectée aux corridors régionaux, pour structurer l'investissement productif sur le littoral et relier l'économie maritime aux flux d'exportation.",
     },
     vision:
-      "Faire d'Aného un pôle côtier attractif, ancré dans le patrimoine togolais, capable d'attirer investisseurs et visiteurs tout en structurant durablement l'emploi local.",
+      "Faire d'Aného un pôle industriel et technologique du littoral, intégré aux corridors régionaux et moteur de la transformation productive.",
     images: [
       "https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800&q=80",
       "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
       "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80",
     ],
     atouts: [
-      "Accès maritime direct",
-      "Patrimoine historique",
-      "Tourisme balnéaire",
-      "Proximité du corridor côtier",
-      "Potentiel de services portuaires",
+      "Corridors régionaux intégrés",
+      "Industrie et technologie",
+      "Connectivité littorale",
+      "Plateforme exportatrice",
+      "Valeur ajoutée productive",
     ],
   },
 
@@ -40,27 +40,27 @@ export const regionsData = {
     color: "#006a4e",
     ville: "Kpalimé",
     grandTrait:
-      "Agro-industrie exportatrice — café, cacao et filières forestières.",
+      "Tourisme et agriculture — chaînes de valeur à forte valeur ajoutée.",
     zone: {
-      nom: "Pôle agro-industriel",
-      type: "Zone Agro-Industrielle",
-      statut: "En développement",
+      nom: "Chaînes de valeur territoriales",
+      type: "Zone Économique Spéciale",
+      statut: "PNDI 2026–2031",
       description:
-        "Pôle de transformation des produits agricoles — café, cacao, palmier à huile — et de valorisation des filières forestières. Positionné comme plateforme exportatrice vers la sous-région ouest-africaine.",
+        "Déployer des chaînes de valeur à forte valeur ajoutée autour du tourisme et de l'agriculture, en s'appuyant sur les atouts du territoire des Plateaux.",
     },
     vision:
-      "Positionner Kpalimé comme hub agro-industriel de référence, créateur de valeur sur les filières agricoles togolaises et moteur d'exportation régionale.",
+      "Positionner Kpalimé comme territoire de valorisation touristique et agricole, créateur de richesse locale et d'emplois productifs.",
     images: [
       "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80",
       "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&q=80",
       "https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?w=800&q=80",
     ],
     atouts: [
-      "Terres fertiles",
-      "Production café & cacao",
-      "Potentiel écotouristique",
-      "Position stratégique sud-est",
-      "Filières forestières",
+      "Tourisme à forte valeur ajoutée",
+      "Agriculture diversifiée",
+      "Filières café et cacao",
+      "Écotourisme",
+      "Territoire des Plateaux",
     ],
   },
 
@@ -70,27 +70,27 @@ export const regionsData = {
     color: "#ffce00",
     ville: "Blitta",
     grandTrait:
-      "Carrefour national — transit, logistique et transformation agricole.",
+      "Pôle agro-minier — industrie lourde au carrefour national.",
     zone: {
-      nom: "Hub logistique et commercial",
-      type: "Zone Économique Mixte",
-      statut: "En développement",
+      nom: "Pôle agro-minier et industrie lourde",
+      type: "Zone Économique Spéciale",
+      statut: "PNDI 2026–2031",
       description:
-        "Pôle logistique et agro-industriel au cœur du corridor national, dédié au transit, à la transformation agricole et au développement des activités commerciales régionales.",
+        "Située au carrefour des grands axes reliant Atakpamé à Sokodé, l'ambition est de créer un pôle agro-minier et d'industrie lourde au cœur du réseau national.",
     },
     vision:
-      "Faire de Blitta le carrefour logistique du Togo, connectant les marchés intérieurs et les flux commerciaux régionaux dans une dynamique de souveraineté économique.",
+      "Faire de Blitta le carrefour industriel central du Togo, moteur d'industrie lourde, de transformation agro-minière et de croissance territorialisée.",
     images: [
       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
       "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
       "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80",
     ],
     atouts: [
-      "Carrefour de transit",
-      "Agriculture vivrière",
-      "Élevage bovin",
+      "Carrefour Atakpamé–Sokodé",
+      "Agro-minier",
+      "Industrie lourde",
+      "Axes structurants",
       "Position centrale",
-      "Réseau routier structurant",
     ],
   },
 
@@ -100,27 +100,27 @@ export const regionsData = {
     color: "#006a4e",
     ville: "Kara",
     grandTrait:
-      "Nord industriel — valorisation minière et échanges transfrontaliers.",
+      "Plateforme agro-industrielle — corridors régionaux intégrés.",
     zone: {
-      nom: "Pôle minier et industriel",
-      type: "Zone Économique Régionale",
-      statut: "Planifiée",
+      nom: "Plateforme agro-industrielle",
+      type: "Zone Économique Spéciale",
+      statut: "PNDI 2026–2031",
       description:
-        "Pôle structurant du nord du Togo, combinant valorisation minière, développement industriel et renforcement des échanges commerciaux avec le Burkina Faso et le Bénin.",
+        "Plateforme agro-industrielle adossée aux corridors régionaux intégrés, pour structurer la transformation et les échanges vers le nord et la sous-région.",
     },
     vision:
-      "Transformer Kara en pôle industriel du nord, porteur de la souveraineté minière et de la création d'emplois qualifiés pour les populations de la sous-région.",
+      "Transformer Kara en plateforme agro-industrielle de référence, connectée aux corridors régionaux et porteuse d'emplois productifs.",
     images: [
       "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
       "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&q=80",
       "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&q=80",
     ],
     atouts: [
+      "Corridors régionaux intégrés",
+      "Transformation agro-industrielle",
+      "Échanges transfrontaliers",
       "Capitale régionale",
-      "Ressources minières",
-      "Potentiel touristique",
-      "Énergie hydraulique",
-      "Marché transfrontalier",
+      "Plateforme du nord",
     ],
   },
 
@@ -130,27 +130,27 @@ export const regionsData = {
     color: "#d21034",
     ville: "Cinkassé",
     grandTrait:
-      "Porte du Sahel — commerce transfrontalier et hub logistique régional.",
+      "Hub logistique sahélien — port sec et logique Last Mile.",
     zone: {
-      nom: "Plateforme transfrontalière",
-      type: "Zone Franche Transfrontalière",
-      statut: "Opérationnelle",
+      nom: "Hub logistique sahélien",
+      type: "Zone Économique Spéciale",
+      statut: "PNDI 2026–2031",
       description:
-        "Plateforme commerciale transfrontalière au carrefour du Togo, du Burkina Faso et du Ghana, dédiée au commerce régional, à la logistique et aux échanges avec le Sahel.",
+        "Hub logistique sahélien et port sec pour désenclaver l'hinterland et se rapprocher du client dans une logique du Last Mile.",
     },
     vision:
-      "Consolider Cinkassé comme porte d'entrée commerciale du Sahel, facilitatrice des échanges transfrontaliers et catalyseur de la prospérité partagée.",
+      "Consolider Cinkassé comme plateforme logistique du Sahel, facilitatrice du désenclavement et de la prospérité partagée.",
     images: [
       "https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800&q=80",
       "https://images.unsplash.com/photo-1473163928189-364b2c4e1135?w=800&q=80",
       "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&q=80",
     ],
     atouts: [
+      "Port sec stratégique",
+      "Logistique Last Mile",
+      "Hub sahélien",
+      "Désenclavement de l'hinterland",
       "Commerce transfrontalier",
-      "Potentiel solaire élevé",
-      "Production céréalière",
-      "Position sahélienne",
-      "Hub logistique régional",
     ],
   },
 };

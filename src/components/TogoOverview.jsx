@@ -36,7 +36,7 @@ export default function TogoOverview({
       </header>
 
       <section className="togo-overview__zones" aria-label="Les cinq zones économiques">
-        <h3 className="togo-overview__zones-title">Les 5 zones économiques</h3>
+        <h3 className="togo-overview__zones-title">{togoOverview.zonesTitle}</h3>
 
         <ol className="togo-overview__zone-list">
           {regionsList.map((id, index) => {
